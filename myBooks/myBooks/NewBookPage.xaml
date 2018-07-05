@@ -4,8 +4,8 @@
              x:Class="myBooks.NewBookPage">
     <ContentPage.Content>
         <StackLayout Margin="10, 10, 10,0">
-            <Entry Placeholder="Write the name of the book" />
-            <Entry Placeholder="Write the name of the Author" />
+            <Entry x:Name="nameEntry" Placeholder="Write the name of the book" />
+            <Entry x:Name="authorEntry" Placeholder="Write the name of the Author" />
             <Button Text="Save" 
                     Clicked="Button_Clicked"/>
         </StackLayout>

@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.IO;
 
 namespace myBooks.Droid
 {
@@ -19,8 +20,12 @@ namespace myBooks.Droid
 
             base.OnCreate(bundle);
 
+            string fileName = "books_db.sqlite";
+            string fileLocation = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string full_path = Path.Combine(fileLocation, fileName);
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+            LoadApplication(new App(full_path));
         }
     }
 }
